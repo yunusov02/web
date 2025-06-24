@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .tweet {
+            padding: 10px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: gray;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .photo-user {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            object-position: center;
+            display: inline-block;
+            border-radius: 50%;
+        }
+
+        .text-user {
+            padding-left: 10px;
+            display: inline-block;
+            vertical-align: center;
+            margin-right: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .tweet-button {
+            display: inline-block;
+            background-color: rgb(24, 119, 242);
+            color: white;
+            vertical-align: center;
+            display: inline-block;
+            border-radius: 999px;
+            font-size: 16px;
+            border: none;
+            padding: 10px 15px;
+            font-weight: bold;
+
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="tweet">
+        <img class="photo-user" src="cat.jpg" alt="">
+        <p class="text-user">What's happening?</p>
+        <button class="tweet-button">Tweet</button>
+    </div>
+
+</body>
+</html>
