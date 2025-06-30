@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inbox UI</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #f2f2f2;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 600px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 0 auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .all-inboxes {
+      color: gray;
+      font-size: 14px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .inboxes {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .inbox {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
+      cursor: pointer;
+    }
+
+    .inbox:hover {
+      background-color: #f9f9f9;
+    }
+
+    .inbox-photo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .inbox-dec-row {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .inbox-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .inbox-title {
+      font-weight: bold;
+      font-size: 15px;
+      color: #333;
+      margin: 0;
+      flex: 1;
+      margin-right: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .inbox-time {
+      font-size: 13px;
+      color: gray;
+      white-space: nowrap;
+    }
+
+    .inbox-description {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.4;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <p class="all-inboxes">All Inboxes</p>
+
+    <div class="inboxes">
+
+      <div class="inbox">
+        <img class="inbox-photo" src="cat.jpg" alt="Sender" />
+        <div class="inbox-dec-row">
+          <div class="inbox-info">
+            <p class="inbox-title">Chewy Promotions Biggest Sales of the year</p>
+            <p class="inbox-time">4:58 PM</p>
+          </div>
+          <div class="inbox-description">
+            Hey there! We are writing to tell you about our latest promotion with exclusive discounts on pet products.
+          </div>
+        </div>
+      </div>
+
+      <div class="inbox">
+        <img class="inbox-photo" src="cat.jpg" alt="Sender" />
+        <div class="inbox-dec-row">
+          <div class="inbox-info">
+            <p class="inbox-title">Important update about your account security</p>
+            <p class="inbox-time">3:15 PM</p>
+          </div>
+          <div class="inbox-description">
+            We have detected unusual activity and want to make sure everything is secure. Please review your account.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .video {
+            height: 150px;
+            width: 400px;
+            display: flex;
+            border: 1px solid gray;
+            box-sizing: border-box;
+        }
+
+        .video-photo {
+            width: 45%;
+            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .video-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .video-desc {
+            width: 55%;
+            display: inline-block;
+            padding: 5px;
+            line-height: 20px;
+        }
+
+        .video-title {
+            font-weight: bold;
+        }
+
+        .video-channel, .video-status {
+            color: gray;
+            padding: 2px;
+
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="video">
+        <div class="video-photo">
+            <img class="video-image" src="cat.jpg" alt="">
+        </div>
+        <div class="video-desc">
+            <p class="video-title">Which Programming language to learn first 2022</p>
+            <p class="video-channel">SuperSimpleDev</p>
+            <p class="video-status">5.7K views * 11 months ago</p>
+        </div>
+    </div>
+</body>
+</html>

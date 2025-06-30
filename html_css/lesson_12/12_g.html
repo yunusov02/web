@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Card</title>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 30px;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      width: 300px;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 10px 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      gap: 12px;
+    }
+
+    .image-row {
+      width: 50px;
+      height: 50px;
+      flex-shrink: 0;
+    }
+
+    .user-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+    }
+
+    .user-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2px;
+    }
+
+    .user-name {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .user-status,
+    .user-category {
+      font-size: 12px;
+      color: gray;
+      margin: 0;
+    }
+
+    .follow-button {
+      background-color: rgb(24, 119, 242);
+      color: white;
+      font-weight: bold;
+      padding: 6px 12px;
+      font-size: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .follow-button:hover {
+      background-color: rgb(20, 100, 210);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="image-row">
+      <img class="user-image" src="cat.jpg" alt="Profile image">
+    </div>
+    <div class="user-info">
+      <p class="user-name">Oliver</p>
+      <p class="user-status">The Cat</p>
+      <p class="user-category">Popular</p>
+    </div>
+    <button class="follow-button">Follow</button>
+  </div>
+
+</body>
+</html>

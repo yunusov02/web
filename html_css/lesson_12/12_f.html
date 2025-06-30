@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0 20px;
+            display: flex;
+            background-color: rgb(120, 36, 176);
+            flex-direction: row;
+            height: 60px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .left-section {
+            font-weight: bold;
+            color: white;
+            font-size: 18px;
+        }
+
+        .middle-section {
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 8px 16px;
+            font-size: 14px;
+            border: none;
+            border-radius: 999px;
+            outline: none;
+            background-color: white;
+            color: #333;
+        }
+
+        .search-bar::placeholder {
+            color: gray;
+            padding: 10px 15px;
+        }
+
+        .right-section {
+            margin-left: 10px;
+        }
+
+        .download-button {
+            padding: 5px 10px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: white;
+            color: white;
+            background-color: rgb(120, 36, 176);
+            border-color: 5px;
+            border-radius: 2px;
+            font-size: 16px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="header">
+        <div class="left-section">Home</div>
+        <div class="middle-section">
+            <input class="search-bar" type="text" name="" id="" placeholder="Search">
+        </div>
+        <div class="right-section">
+            <button class="download-button">Download</button>
+        </div>
+    </div>
+
+</body>
+</html>
