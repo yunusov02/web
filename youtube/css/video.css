@@ -10,6 +10,7 @@
 
 .thumbnail-row {
     margin-bottom: 10px;
+    position: relative;
 }
 
 .thumbnail {
@@ -17,6 +18,17 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.video-time {
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 2px;
+    border-radius: 2px;
+    font-size: 14px;
 }
 
 .video-info-grid {

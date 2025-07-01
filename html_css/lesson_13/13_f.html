@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            border: solid;
+            border-color: gray;
+            border-radius: 10px;
+            padding: 10px;
+            border-width: 1px;
+            max-width: 400px;
+        }
+
+        .photo-container-row {
+            width: 60px;
+            margin-left: 15px;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .channel-picture {
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 60px;
+        }
+
+
+        .container-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .channel {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0;
+        }
+
+        .channel-name {
+            font-weight: bold;
+        }
+
+        .channel-tag {
+            color: rgb(101, 213, 250);
+        }
+
+        .channel-description,
+        .video-description {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            border-style: solid;
+            border-radius: 9px;
+            border-width: 1px;
+            border-color: rgb(157, 157, 157);
+            overflow: hidden;
+        }
+
+        .video-picture {
+            width: 80px;
+            height: 100%;
+            background-color: rgb(157, 157, 157);
+            flex-shrink: 0;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            margin-right: 10px;
+        }
+
+        .video-info {
+            flex: 1;
+        }
+
+        .video-channel {
+            color: rgb(101, 213, 250);
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="photo-container-row">
+            <img class="channel-picture" src="cat.jpg" alt="">
+        </div>
+        <div class="container-info">
+            <div class="channel">
+                <p class="channel-name">supersimple.dev</p>
+                <p class="channel-tag">@SupersimpleDev</p>
+            </div>
+            <div class="channel-description">
+                What is backend web development? A complete ovwerview. New video is up!!!
+            </div>
+            <div class="video-container">
+                <div class="video-picture">
+
+                </div>
+                <div class="video-info">
+                    <p class="video-channel">youtube.com</p>
+                    <p class="video-description">Backend web development - a complete overview (2021)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
