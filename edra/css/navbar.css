@@ -1,0 +1,31 @@
+.navbar {
+    height: 80px;
+}
+
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #1677FF;
+  }
+  
+.logo-text {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+  
+.right-navbar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* spacing between bell and profile */
+}
+
+.bell-icon,
+.user-icon {
+    font-size: 28px;
+}
+  
+
