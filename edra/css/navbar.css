@@ -1,31 +1,65 @@
 .navbar {
     height: 80px;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
+
+.company {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    color: rgb(29, 161, 242);
+}
 
 .company-logo {
+    font-size: 36px;
+    margin-left: 15px;
+}
+
+
+.company-name {
+    font-size: 24px;
+}
+
+
+.navbar-sections {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 600;
-    font-size: 1.25rem;
-    color: #1677FF;
+    flex-direction: row;
+    gap: 20px;
+    padding-right: 20px;
+    font-size: 24px;
   }
   
-.logo-text {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-}
-  
-.right-navbar {
+  .navbar-sections a {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.75rem; /* spacing between bell and profile */
-}
-
-.bell-icon,
-.user-icon {
-    font-size: 28px;
-}
+    text-decoration: none;
+    color: rgb(29, 161, 242);
+    transition: color 0.3s ease;
+  }
   
-
+  .navbar-sections a span {
+    display: none;
+    /* opacity: 0;
+    font-size: 12px;
+    transition: opacity 0.3s ease; */
+  }
+  
+  .navbar-sections a:hover span {
+    display: block;
+    opacity: 1;
+    font-size: 12px;
+  }
+  
