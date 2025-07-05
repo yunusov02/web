@@ -1,24 +1,155 @@
+/* Main section layout */
 .main {
   position: absolute;
   top: 80px;
-  left: 200px; /* aligns with sidebar */
+  left: 200px;
   right: 0;
   bottom: 0;
-  background-color: rgb(236, 236, 236);
+  background-color: rgb(236, 236, 236);;
   color: black;
-  padding: 20px;
-  overflow: auto;
+  overflow-y: auto;
   transition: left 0.3s ease;
+  padding-top: 20px;
 }
-
-
 
 .main.expanded {
   left: 60px;
 }
 
-
-.main div {
+/* Listed section padding */
+.listed-section {
   background-color: white;
-  border-radius: 10px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  width: 80%;
+  border-radius: 20px;
 }
+
+/* Make all internal white boxes clean */
+.main .container-fluid > div,
+.table {
+  background-color: white;
+}
+
+/* Add & Search Section */
+.add-search-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  margin-bottom: 24px;
+}
+
+.add-section .btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+/* Search bar + optional buttons */
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search input {
+  width: 280px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid gray;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.search input:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+}
+
+.search input::placeholder {
+  font-size: 16px;
+  color: #adb5bd;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.search-button {
+  font-size: 24px;
+  border: none;
+  background-color: white;
+}
+
+
+
+/* Table styling */
+.table {
+  margin-top: 10px;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.table thead th {
+  background-color: #f1f3f5;
+  border: none;
+  font-weight: 600;
+}
+
+.table tbody tr {
+  background-color: #ffffff;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Pagination */
+.pagination {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination-number,
+.pagination-current,
+.pagination-disabled {
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #e9ecef;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.pagination-number:hover {
+  background-color: #dce0e4;
+}
+
+.pagination-current {
+  background-color: #0d6efd;
+  color: white;
+  cursor: default;
+}
+
+.pagination-disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+
