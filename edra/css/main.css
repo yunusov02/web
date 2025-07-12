@@ -1,4 +1,4 @@
-/* Main section layout */
+/* ========== MAIN SECTION LAYOUT ========== */
 .main {
   position: absolute;
   top: 80px;
@@ -16,27 +16,30 @@
   left: 60px;
 }
 
-/* Listed section padding */
+
+@media (max-width: 768px) {
+  .main {
+    left: 0;
+    width: 100vw;
+  }
+}
+
+/* ========== LISTED SECTION ========== */
 .listed-section {
   background-color: white;
-  margin: 0 auto;
-  padding: 20px 40px;
-  width: 80%;
+  padding: 30px;
   border-radius: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
-/* Make all internal white boxes clean */
-.main .container-fluid > div,
-.table {
-  background-color: white;
-}
-
-/* Add & Search Section */
+/* ========== ADD & SEARCH SECTION ========== */
 .add-search-section {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 16px 24px;
+  align-items: center;
+  gap: 16px;
   margin-bottom: 24px;
 }
 
@@ -46,18 +49,19 @@
   border-radius: 8px;
 }
 
-/* Search bar + optional buttons */
+/* ========== SEARCH BAR STYLING ========== */
 .search {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .search input {
-  width: 280px;
+  width: 250px;
   padding: 10px 20px;
   border-radius: 50px;
-  border: 1px solid gray;
+  border: 1px solid #ccc;
   outline: none;
   transition: 0.3s ease;
 }
@@ -67,53 +71,38 @@
   box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
 }
 
-.search input::placeholder {
-  font-size: 16px;
-  color: #adb5bd;
-}
-
-.search {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-}
-
 .search-button {
-  font-size: 24px;
+  font-size: 20px;
+  background: white;
   border: none;
-  background-color: white;
+  cursor: pointer;
 }
 
-
-
-/* Table styling */
+/* ========== TABLE STYLING ========== */
 .table {
-  margin-top: 10px;
+  margin-top: 20px;
   border-collapse: separate;
-  border-spacing: 0 8px;
+  border-spacing: 0 10px;
 }
 
 .table thead th {
   background-color: #f1f3f5;
-  border: none;
   font-weight: 600;
+  border: none;
 }
 
 .table tbody tr {
-  background-color: #ffffff;
-  border-radius: 8px;
-  transition: background-color 0.2s;
+  background-color: #fff;
+  transition: background-color 0.2s ease;
 }
 
 .table tbody tr:hover {
   background-color: #f8f9fa;
 }
 
-/* Pagination */
+/* ========== PAGINATION ========== */
 .pagination {
-  padding: 20px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
 }
@@ -131,10 +120,10 @@
 .pagination-disabled {
   padding: 8px 14px;
   border-radius: 8px;
-  cursor: pointer;
   background-color: #e9ecef;
   font-weight: 500;
-  transition: 0.2s;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .pagination-number:hover {
@@ -148,8 +137,48 @@
 }
 
 .pagination-disabled {
-  opacity: 0.6;
+  opacity: 0.5;
   pointer-events: none;
 }
 
+/* ========== SLIDE-IN FORM CONTAINER ========== */
+#studentFormContainer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  border-left: 1px solid #ccc;
+  overflow-y: auto;
+  transition: right 0.3s ease-in-out;
+  z-index: 1050;
+  padding: 30px;
+}
 
+#studentFormContainer.active {
+  right: 0;
+}
+
+/* Responsive form width for smaller screens */
+@media (max-width: 768px) {
+  #studentFormContainer {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  .search {
+    justify-content: center;
+  }
+
+  .add-search-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
